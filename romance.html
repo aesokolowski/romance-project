@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <!-- Andrew Sokolowski      romance.html        07/30/2019 -->
+  <head>
+    <meta charset='UTF-8' />
+    <title>Romantic Poem Generator</title>
+    <link rel='stylesheet' type='text/css' href='romance.css' />
+    <script type='text/javascript' src='romance.js' defer></script>
+    <script type='text/javascript' src='romance-page.js' defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Romantic Poem Generator</h2>
+    </header>
+
+    <article>
+      <div class='full-width'>
+        <p>
+          <strong>Step 1:</strong> pick a corpus file<br />
+          <span class='smaller'>
+            any plaintext file such as .txt will do -- no .txt files? copy a
+            document, blog post, news story, or lyrics page from the web and
+	    paste into a text editor such as Notepad (Windows) or vim (Unix)
+	    and simply save it!
+          </span><br />
+          <strong>Step 2:</strong> select how many lines of poetry to wish to
+          generate from the drop-down menu<br />
+	  <strong>Step 3:</strong> press the button to generate your poem!
+	  <br />
+	  <span class='smaller'>
+            NOTE: Apparently only Opera resets the drop-down menus upon
+	    re-loading -- in other browsers the menus will still show a
+	    value but program will not store the value until changed 
+	  </span>
+        </p>
+      </div>
+
+      <div class='full-width'>
+        <div class='left-frame'>
+          <h5>Specify Corpus File:</h5>
+          <input id='input-button' type='file' accept='text/plain'
+              onchange='loadCorpus(event)' />
+        </div>
+   
+        <div class='right-frame'>
+          <h5>Pick number of lines to generate:</h5>
+          <select id='lines-select' onchange='setNumLines()'>
+            <option value='default'>
+              Select number
+            </option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+            <option value='13'>13</option>
+            <option value='14'>14</option>
+            <option value='15'>15</option>
+            <option value='16'>16</option>
+            <option value='17'>17</option>
+            <option value='18'>18</option>
+            <option value='19'>19</option>
+            <option value='20'>20</option>
+            <option value='21'>21</option>
+            <option value='22'>22</option>
+            <option value='23'>23</option>
+            <option value='24'>24</option>
+            <option value='25'>25</option>
+          </select>
+        </div>
+      </div>
+
+      <div class='full-width'>
+        <div class='left-frame'>
+          <h5>Choose how many words per line (optional):</h5>
+          <p>
+	    <span class='smaller'>
+	      "Random" randomizes the length of each line from 3 to 12,
+	      inclusive
+	    </span>
+	  </p>
+          <select id='per-line-select' onchange='setWordsPerLine()'>
+	    <option value='default'>
+	      Random
+            </option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>         
+          </select>
+        </div>
+      
+      
+        <div class='right-frame'>
+          <h5>Choose how many lines per stanza (optional):</h5>
+	  <span class='smaller'><br id='break' /></span>
+	  <select id='stanza-select' onchange='setStanzaLength()'>
+            <option value='default'>
+	      No breaks/One stanza
+  	    </option>
+	    <option value='1'>1</option>
+	    <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+  	  </select>
+        </div>
+      </div>
+
+      <div class='full-width'>
+	<br /><br /><br /><br />
+	<div id='submit-button'>
+          <button type='button' onclick='submitAction()'>
+            Generate Poem!
+          </button>
+	</div>
+	<br /><br />
+        <p id='output-area1'></p>
+        <p id='output-area2'></p>
+	<p id='output-area3'></p>
+      </div>
+    </article>
+  </body>
+</html>

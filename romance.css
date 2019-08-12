@@ -1,0 +1,62 @@
+/*
+ *   Andrew Sokolowski      romance.css       07/30/2019
+ */
+
+html, body {
+  font-family: 'Arial Bold', Helvetica, sans-serif;
+  background-color: #b3c6ff;
+}
+
+header {
+  position: absolute;
+  left: 0.0px;
+  top: 0.0px;
+  background-color: #001a66;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  text-shadow: 1.5px 1.0px #4d0039;
+  color: #ff1ac6;
+}
+
+article {
+  position: relative;
+  left: 0.0em;
+  top: 6.0em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+.left-frame {
+  width: 50%;
+  float: left;
+}
+
+.right-frame {
+  width: 50%;
+  float: right;
+}
+
+.full-width {
+  width: 100%;
+  float: left;
+}
+
+.smaller {
+  font-size: 0.85em;
+}
+
+#output-area3 {
+  color: #990000;
+}
+
+#submit-button {
+  text-align: center;
+}
+
+#break {
+  font-size: 2.15em;
+}

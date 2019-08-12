@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Andrew Sokolowski    romance-test.html    07/25/2019 -->
+    <meta charset='UTF-8' />
+    <title>Romance.js Test Output</title>
+    <link rel="stylesheet" type='text/css' href='romance-test.css' />
+    <script type='text/javascript' src='romance.js' defer></script>
+    <script type='text/javascript' src='romance-test-helpers.js' defer>
+    </script>
+  </head>
+
+  <body>
+    <h5>Specify corpus file:</h5>
+    <input type='file' accept='text/plain' onchange='readCorpus(event)' />
+
+    <!-- in the end I just had typos... onchange did wor`k -->
+
+    <select id='lines-select' onchange='testSelect()'>
+      <option value='default'>
+        Select number of lines
+      </option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>
+      <option value='6'>6</option>
+      <option value='7'>7</option>
+      <option value='8'>8</option>
+      <option value='9'>9</option>
+      <option value='10'>10</option>
+      <option value='11'>11</option>
+      <option value='12'>12</option>
+      <option value='13'>13</option>
+      <option value='14'>14</option>
+      <option value='15'>15</option>
+    </select>
+    <!--
+    <button id='select-button' onclick='testSelect()'>
+      Press to test the select
+    </button>
+    -->
+
+    <h5>Extracted text:</h5>
+    <p id='plain-text'>load a text file to be extracted</p>
+
+    <h5>Parsed text:</h5>
+    <p id='parsed-text'>
+      load a text file to be parsed<br/>
+      NOTE: will be formatted to print 10 words per line
+    </p>
+
+    <h5>Word pairs:</h5>
+    <p id='word-pairs'>load a text file to view word pairs</p>
+
+    <h5 style="color:red">Sample line:</h5>
+    <p id='sample-line' style='color:red'>this test no longer needed</p>
+
+    <h5>Generated poem:</h5>
+    <p id='poem-field'>load a text file to generate a poem</p>
+  </body>
+</html>
